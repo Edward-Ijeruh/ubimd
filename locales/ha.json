@@ -1,0 +1,101 @@
+{
+  "navbar": {
+    "brand": "UbiMD",
+    "language": "Harshe",
+    "features": "Fasali",
+    "testimonials": "Shaidu",
+    "how_it_works": "Yadda Yake Aiki",
+    "join_waitlist": "Shiga Jerin Masu Jira"
+  },
+
+  "hero": {
+    "slide1_title": "Kulawar Lafiya Ga Kowane Dan Najeriya",
+    "slide1_sub": "Tattaunawar likita ta yanar gizo ko da intanet ya yi rauni",
+
+    "slide2_title": "Likitoci Masu Izini Kuma Amintattu",
+    "slide2_sub": "Kwararru masu lasisi, suna shirye su taimaka a harshen da kake so",
+
+    "slide3_title": "Haɗa Likita Da Mara Lafiya Daga Nesa",
+    "slide3_sub": "Tattaunawar bidiyo mai ƙarfi kan kowanne na'ura",
+
+    "join_waitlist": "Shiga Jerin Masu Jira"
+  },
+
+  "features_section": {
+    "title": "An Kera Shi Don Ya Tallafi Dukkan Yan Najeriya",
+    "subtitle": "UbiMD na sauƙaƙa tattaunawar likita daga nesa cikin tsaro da inganci",
+
+    "card1_title": "Bidiyo Mai Tsaro",
+    "card1_desc": "Tattaunawar fuska-da-fuska mai aiki ko da a 2G/3G. Mun inganta tsarin don yin aiki da intanet mai rauni.",
+
+    "card2_title": "Nemo Likita Mafi Dacewa",
+    "card2_desc": "Ana haɗa ka da likitan da ya dace da alamomin ka, harshen ka, da yankinka.",
+
+    "card3_title": "AI Mai Gane Magani",
+    "card3_desc": "Dauki hoto na magani, AI zai gano shi kuma ya bayyana maka.",
+
+    "card4_title": "WhatsApp Bot",
+    "card4_desc": "Samu amsoshin tambayoyin lafiya cikin sauki ba tare da shiga ciki ba.",
+
+    "card5_title": "Likitoci Masu Lasisi",
+    "card5_desc": "Duk likitocin da ke UbiMD an tabbatar da su don yin aiki a Najeriya.",
+
+    "card6_title": "Yana Aiki A Kowane Na’ura",
+    "card6_desc": "UbiMD yana aiki akan wayoyi, kwamfutar hannu, da tsofaffin na’urori."
+  },
+
+  "stats": {
+    "title": "Dandalin Lafiya Mai Aminci",
+    "sub": "Muna taimaka wa marasa lafiya da likitoci a fadin Najeriya",
+    "stat1_label": "Likitoci Masu Rijista",
+    "stat2_label": "Marasa Lafiya da Aka Taimaka",
+    "stat3_label": "Tattaunawar Da Ta Yi Nasara"
+  },
+
+  "how_it_works_section": {
+    "title": "Yadda UbiMD Ke Aiki",
+    "step1_title": "Ƙirƙiri Asusu",
+    "step1_desc": "Yi rijista cikin sauri da lambar wayarka.",
+
+    "step2_title": "Nemo Likita",
+    "step2_desc": "Tsarinmu zai haɗa ka da likitan da ya dace da kai.",
+
+    "step3_title": "Fara Tattaunawa",
+    "step3_desc": "Fara tattaunawar bidiyo ko rubutu da likita nan take."
+  },
+
+  "testimonials_section": {
+    "title": "Ra’ayoyin Jama’ar Najeriya",
+    "sub": "Labaran gaskiya daga mutane",
+
+    "t1_name": "Amina, Abuja",
+    "t1_text": "Tattaunawar ta kasance da sauri kuma likitan ya fahimci harshena.",
+
+    "t2_name": "Tunde, Lagos",
+    "t2_text": "UbiMD ya taimaka min na sami likita ko da intanet ya yi rauni.",
+
+    "t3_name": "Chinedu, Enugu",
+    "t3_text": "AI ya taimaka min wajen gane maganin da zan sha."
+  },
+
+  "early_access_section": {
+    "title": "Samu Shiga Na Farko",
+    "sub": "Shiga jerin masu jira domin samun amfani da UbiMD kafin kowa.",
+    "placeholder_email": "Shigar da imel",
+    "button_join": "Shiga Jerin Masu Jira"
+  },
+
+  "footer": {
+    "about": "Game da Mu",
+    "contact": "Tuntube Mu",
+    "privacy": "Manufar Sirri",
+    "terms": "Sharuddan Amfani",
+    "rights": "Duk haƙƙoƙi an kiyaye su."
+  },
+
+  "common": {
+    "join_waitlist": "Shiga Jerin Masu Jira",
+    "learn_more": "Kara Koyo",
+    "get_started": "Fara Amfani"
+  }
+}

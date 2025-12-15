@@ -1,0 +1,1184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UbiMD</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@uicons/regular/css/uicons-regular.css"
+    />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <header
+      id="navbar"
+      class="fixed top-0 left-0 w-full z-50 transition-all duration-300"
+    >
+      <div
+        class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4"
+      >
+        <!-- Logo -->
+        <div class="flex items-center gap-2">
+          <img
+            data-light="assets/home/navbar/Cylinder.svg"
+            data-dark="assets/home/navbar/BlackCylinder.svg"
+            src="assets/home/navbar/Cylinder.svg"
+            class="h-8 w-8 swap-icon"
+          />
+
+          <span class="text-2xl font-bold nav-text">UbiMD</span>
+        </div>
+
+        <!-- Desktop menu -->
+        <nav class="hidden md:flex items-center gap-8">
+          <!-- Language selector -->
+          <div
+            class="flex items-center gap-2 cursor-pointer nav-text transition transform hover:scale-105"
+          >
+            <img
+              data-light="assets/home/navbar/globe.png"
+              data-dark="assets/home/navbar/black-globe.png"
+              src="assets/home/navbar/globe.png"
+              class="h-4 w-4 swap-icon"
+            />
+
+            <select
+              id="languageSelector"
+              class="bg-transparent nav-text outline-none cursor-pointer pr-2 py-1 text-white"
+            >
+              <option value="en">English</option>
+              <option value="ig">Igbo</option>
+              <option value="yo">Yoruba</option>
+              <option value="ha">Hausa</option>
+            </select>
+          </div>
+
+          <a
+            href="#features"
+            class="nav-text transition transform hover:scale-105"
+            >Features</a
+          >
+          <a
+            href="#testimonials"
+            class="nav-text transition transform hover:scale-105"
+            >Testimonials</a
+          >
+          <a
+            href="#how-it-works"
+            class="nav-text transition transform hover:scale-105"
+            >How it Works</a
+          >
+
+          <a href="#early-access"
+            ><button
+              class="px-5 py-2 bg-blue-500 text-white rounded-lg font-semibold shadow hover:bg-blue-600 transition"
+            >
+              Join Waitlist
+            </button></a
+          >
+        </nav>
+
+        <!-- Mobile menu button -->
+        <button id="mobileMenuBtn" class="md:hidden text-3xl nav-text">
+          ☰
+        </button>
+      </div>
+
+      <!-- Mobile dropdown -->
+      <div
+        id="mobileMenu"
+        class="fixed top-0 left-0 w-full h-full bg-white z-50 transform -translate-y-full transition-transform duration-500 ease-in-out px-4"
+      >
+        <!-- Close button -->
+        <button
+          id="mobileMenuClose"
+          class="absolute top-6 right-6 text-3xl text-black"
+        >
+          &times;
+        </button>
+
+        <nav class="flex flex-col items-center justify-center h-full w-full">
+          <!-- Language selector -->
+          <div class="flex items-center gap-1 mb-4">
+            <img
+              src="assets/home/navbar/black-globe.png"
+              alt="Globe icon"
+              class="h-4 w-4"
+            />
+            <select
+              class="bg-transparent outline-none cursor-pointer pr-2 py-1 text-black"
+            >
+              <option value="en">English</option>
+              <option value="ig">Igbo</option>
+              <option value="yo">Yoruba</option>
+              <option value="ha">Hausa</option>
+            </select>
+          </div>
+
+          <!-- Links -->
+          <a
+            href="#features"
+            class="w-full text-center py-4 text-lg border-t border-gray-300"
+            onclick="closeMobileMenu()"
+            >Features</a
+          >
+          <a
+            href="#testimonials"
+            class="w-full text-center py-4 text-lg border-t border-gray-300"
+            onclick="closeMobileMenu()"
+            >Testimonials</a
+          >
+          <a
+            href="#how-it-works"
+            class="w-full text-center py-4 text-lg border-y border-gray-300"
+            onclick="closeMobileMenu()"
+            >How it Works</a
+          >
+
+          <!-- Join Waitlist button -->
+          <a href="#early-access">
+            <button
+              class="py-2 px-6 mt-4 bg-blue-500 text-white rounded-lg text-lg"
+              onclick="closeMobileMenu()"
+            >
+              Join Waitlist
+            </button></a
+          >
+        </nav>
+      </div>
+    </header>
+
+    <!-- Herosection -->
+    <section id="hero" class="relative h-screen w-full overflow-hidden">
+      <!-- Slides -->
+      <div id="heroSlides" class="absolute inset-0 w-full h-full">
+        <!-- Slide 1 -->
+        <div
+          class="hero-slide absolute inset-0 w-full h-full opacity-100 visible transition-all duration-700"
+        >
+          <!-- Background -->
+          <div
+            class="absolute inset-0 bg-cover bg-center"
+            style="
+              background-image: url('assets/home/herosection/hero-one.png');
+            "
+          ></div>
+
+          <!-- Overlay -->
+          <div class="absolute inset-0 bg-black/50"></div>
+
+          <!-- Text content -->
+          <div
+            class="relative z-[3] flex items-center justify-center h-full text-center text-white px-6"
+          >
+            <div>
+              <h1 class="text-3xl md:text-5xl font-bold">
+                Healthcare Access for Every Nigerian
+              </h1>
+              <p class="mt-4 text-sm md:text-lg">
+                Quality medical consultations from anywhere, even with slow
+                internet
+              </p>
+
+              <a href="#early-access">
+                <button
+                  class="mt-6 px-6 py-3 bg-blue-500 text-white rounded-lg font-semibold shadow hover:bg-blue-600 transition"
+                >
+                  Join Waitlist
+                </button>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div
+          class="hero-slide absolute inset-0 w-full h-full opacity-0 invisible transition-all duration-700"
+        >
+          <!-- Background -->
+          <div
+            class="absolute inset-0 bg-cover bg-center"
+            style="
+              background-image: url('assets/home/herosection/hero-two.png');
+            "
+          ></div>
+
+          <!-- Overlay -->
+          <div class="absolute inset-0 bg-black/50"></div>
+
+          <!-- Text content -->
+          <div
+            class="relative z-[3] flex items-center justify-center h-full text-center text-white px-6"
+          >
+            <div>
+              <h1 class="text-3xl md:text-5xl font-bold">
+                Verified Doctors You Can Trust
+              </h1>
+              <p class="mt-4 text-sm md:text-lg">
+                Licensed medical experts ready to assist in your preferred
+                language
+              </p>
+              <a href="#early-access">
+                <button
+                  class="mt-6 px-6 py-3 bg-blue-500 text-white rounded-lg font-semibold shadow hover:bg-blue-600 transition"
+                >
+                  Join Waitlist
+                </button>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div
+          class="hero-slide absolute inset-0 w-full h-full opacity-0 invisible transition-all duration-700"
+        >
+          <!-- Background -->
+          <div
+            class="absolute inset-0 bg-cover bg-center"
+            style="
+              background-image: url('assets/home/herosection/hero-three.png');
+            "
+          ></div>
+
+          <!-- Overlay -->
+          <div class="absolute inset-0 bg-black/50"></div>
+
+          <!-- Text content -->
+          <div
+            class="relative z-[3] flex items-center justify-center h-full text-center text-white px-6"
+          >
+            <div>
+              <h1 class="text-3xl md:text-5xl font-bold">
+                Connecting Doctors and Patients Remotely
+              </h1>
+              <p class="mt-4 text-sm md:text-lg">
+                Reliable video consultations available on any device
+              </p>
+              <a href="#early-access">
+                <button
+                  class="mt-6 px-6 py-3 bg-blue-500 text-white rounded-lg font-semibold shadow hover:bg-blue-600 transition"
+                >
+                  Join Waitlist
+                </button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Dot indicators -->
+      <div
+        class="absolute z-[3] bottom-6 left-1/2 -translate-x-1/2 flex gap-1"
+        id="heroDots"
+      >
+        <div
+          class="dot w-3 h-3 bg-white rounded-full transition-all duration-300"
+        ></div>
+        <div
+          class="dot w-3 h-3 bg-white rounded-full transition-all duration-300"
+        ></div>
+        <div
+          class="dot w-3 h-3 bg-white rounded-full transition-all duration-300"
+        ></div>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section id="features" class="py-16">
+      <div class="max-w-7xl mx-auto px-6 text-center">
+        <h2 class="text-3xl md:text-4xl font-bold">
+          Designed for Accessibility and Efficiency in Nigeria
+        </h2>
+        <p class="mt-4 text-gray-600">
+          UbiMD offers a seamless and secure way to conduct remote
+          consultations, enhancing patient care and practice efficiency
+        </p>
+
+        <!-- Cards grid -->
+        <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Card 1 -->
+          <div
+            class="bg-white rounded-lg shadow-md overflow-hidden transform transition duration-500 hover:shadow-xl hover:-translate-y-2 group text-start"
+          >
+            <div class="overflow-hidden">
+              <img
+                src="assets/home/features/video-consult.jpg"
+                alt="Feature 1"
+                class="w-full h-48 object-cover transform transition duration-500 group-hover:scale-105"
+              />
+            </div>
+            <div class="p-6 flex flex-col gap-4 h-full">
+              <div class="flex items-center gap-4">
+                <div class="bg-blue-50 p-3 rounded-lg">
+                  <img
+                    src="assets/home/features/ChatDots.svg"
+                    alt="Icon 1"
+                    class="h-6 w-6"
+                  />
+                </div>
+              </div>
+              <h3 class="text-lg md:text-xl font-semibold">
+                Secure Video Consultation
+              </h3>
+              <p class="text-gray-600 text-sm md:text-base">
+                Face to face consultation that works seamlessly on 2G/3G
+                networks and other phones. Our optimized technology ensures you
+                connect with Doctors even with slow internet.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div
+            class="bg-white rounded-lg shadow-md overflow-hidden transform transition duration-500 hover:shadow-xl hover:-translate-y-2 group text-start"
+          >
+            <div class="overflow-hidden">
+              <img
+                src="assets/home/features/doctor-matching.jpg"
+                alt="Feature 2"
+                class="w-full h-48 object-cover transform transition duration-500 group-hover:scale-105"
+              />
+            </div>
+            <div class="p-6 flex flex-col gap-4 h-full">
+              <div class="flex items-center gap-4">
+                <div class="bg-blue-50 p-3 rounded-lg">
+                  <img
+                    src="assets/home/features/UserFocus.svg"
+                    alt="Icon 2"
+                    class="h-6 w-6"
+                  />
+                </div>
+              </div>
+              <h3 class="text-lg md:text-xl font-semibold">
+                Smart Doctor Matching
+              </h3>
+              <p class="text-gray-600 text-sm md:text-base">
+                Get automatically paired with the right doctor based on your
+                symptoms, preferred language (English, Yoruba, Hausa, Igbo), and
+                location. Find the perfect match every time.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div
+            class="bg-white rounded-lg shadow-md overflow-hidden transform transition duration-500 hover:shadow-xl hover:-translate-y-2 group text-start"
+          >
+            <div class="overflow-hidden">
+              <img
+                src="assets/home/features/pill-identifier.jpg"
+                alt="Feature 3"
+                class="w-full h-48 object-cover transform transition duration-500 group-hover:scale-105"
+              />
+            </div>
+            <div class="p-6 flex flex-col gap-4 h-full">
+              <div class="flex items-center gap-4">
+                <div class="bg-blue-50 p-3 rounded-lg">
+                  <img
+                    src="assets/home/features/Pill.svg"
+                    alt="Icon 3"
+                    class="h-6 w-6"
+                  />
+                </div>
+              </div>
+              <h3 class="text-lg md:text-xl font-semibold">
+                AI Pill Identifier
+              </h3>
+              <p class="text-gray-600 text-sm md:text-base">
+                Simply upload a photo of your medicine and our AI powered by
+                Google will identify it, explain its uses, and provide important
+                information. Always consult your doctor before any medication.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div
+            class="bg-white rounded-lg shadow-md overflow-hidden transform transition duration-500 hover:shadow-xl hover:-translate-y-2 group text-start"
+          >
+            <div class="overflow-hidden">
+              <img
+                src="assets/home/features/whatsapp-chatbot.jpg"
+                alt="Feature 4"
+                class="w-full h-48 object-cover transform transition duration-500 group-hover:scale-105"
+              />
+            </div>
+            <div class="p-6 flex flex-col gap-4 h-full">
+              <div class="flex items-center gap-4">
+                <div class="bg-blue-50 p-3 rounded-lg">
+                  <img
+                    src="assets/home/features/WhatsappLogo.svg"
+                    alt="Icon 4"
+                    class="h-6 w-6"
+                  />
+                </div>
+              </div>
+              <h3 class="text-lg md:text-xl font-semibold">WhatsApp Chatbot</h3>
+              <p class="text-gray-600 text-sm md:text-base">
+                Get instant answers to your health questions without logging in.
+                Quick, convenient, and always available when you need basic
+                health information.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 5 -->
+          <div
+            class="bg-white rounded-lg shadow-md overflow-hidden transform transition duration-500 hover:shadow-xl hover:-translate-y-2 group text-start"
+          >
+            <div class="overflow-hidden">
+              <img
+                src="assets/home/features/verified-doctors.jpg"
+                alt="Feature 5"
+                class="w-full h-48 object-cover transform transition duration-500 group-hover:scale-105"
+              />
+            </div>
+            <div class="p-6 flex flex-col gap-4 h-full">
+              <div class="flex items-center gap-4">
+                <div class="bg-blue-50 p-3 rounded-lg">
+                  <img
+                    src="assets/home/features/ShieldCheck.svg"
+                    alt="Icon 5"
+                    class="h-6 w-6"
+                  />
+                </div>
+              </div>
+              <h3 class="text-lg md:text-xl font-semibold">Verified Doctors</h3>
+              <p class="text-gray-600 text-sm md:text-base">
+                Every doctor in UbiMD is verified and licensed to practice in
+                Nigeria. Our rigorous verification system ensures you always
+                receive care from qualified medical professionals.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 6 -->
+          <div
+            class="bg-white rounded-lg shadow-md overflow-hidden transform transition duration-500 hover:shadow-xl hover:-translate-y-2 group text-start"
+          >
+            <div class="overflow-hidden">
+              <img
+                src="assets/home/features/cross-device.jpg"
+                alt="Feature 6"
+                class="w-full h-48 object-cover transform transition duration-500 group-hover:scale-105"
+              />
+            </div>
+            <div class="p-6 flex flex-col gap-4 h-full">
+              <div class="flex items-center gap-4">
+                <div class="bg-blue-50 p-3 rounded-lg">
+                  <img
+                    src="assets/home/features/DeviceMobileCamera.svg"
+                    alt="Icon 6"
+                    class="h-6 w-6"
+                  />
+                </div>
+              </div>
+              <h3 class="text-lg md:text-xl font-semibold">
+                Works on Any Device
+              </h3>
+              <p class="text-gray-600 text-sm md:text-base">
+                Whether you have a smartphone, tablet, or basic feature phone,
+                UbiMD works for you. Designed for accessibility and efficiency
+                across all devices.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats -->
+    <section id="stats" class="py-16">
+      <div class="max-w-7xl mx-auto px-6">
+        <!-- Stats Card -->
+        <div
+          class="w-full bg-blue-50 border border-blue-500 rounded-lg p-8 md:p-16 flex flex-col items-center text-center"
+        >
+          <!-- Icon with number -->
+          <div class="flex items-center gap-3 mb-4">
+            <img
+              src="assets/home/stats/Heartbeat.svg"
+              alt="Stats Icon"
+              class="h-12 w-12"
+            />
+            <span class="text-4xl md:text-5xl font-bold">10,000+</span>
+          </div>
+
+          <!-- Main description -->
+          <p class="text-lg md:text-xl font-medium mb-2">
+            Empowering thousands of consultations across Nigeria
+          </p>
+
+          <!-- Smaller description -->
+          <p class="text-sm md:text-base text-[#5C5C5C]">
+            Join the growing community of Nigerians accessing quality healthcare
+            from anywhere
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Secure spot -->
+    <section id="early-access" class="bg-[#F8FCFE] py-16">
+      <div class="max-w-4xl mx-auto px-6 text-center">
+        <!-- Banner -->
+        <div
+          class="inline-flex items-center gap-2 bg-blue-100 text-blue-800 px-4 py-1 rounded-full mb-4 text-sm md:text-base"
+        >
+          <img
+            src="assets/home/secure-spot/UserPlus.svg"
+            alt="Icon"
+            class="h-5 w-5"
+          />
+          <span>500+ People already on the waitlist</span>
+        </div>
+
+        <!-- Header -->
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">
+          Secure Your Spot Today
+        </h2>
+
+        <!-- Description -->
+        <p class="text-gray-600 mb-12 md:mb-16 px-2 md:px-0">
+          Join thousands of Nigerians waiting for better healthcare access
+        </p>
+
+        <!-- Form -->
+        <form
+          id="earlyAccessForm"
+          class="bg-white rounded-xl shadow-[4px_4px_46.9px_0_rgba(0,0,0,0.25)] p-6 md:p-12 grid gap-6"
+        >
+          <!-- First Name -->
+          <div class="flex flex-col text-left">
+            <label class="mb-2 text-gray-700"
+              >First Name <span class="text-red-500">*</span></label
+            >
+            <input
+              type="text"
+              name="firstName"
+              placeholder="Enter your first name"
+              class="rounded-xl border border-gray-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-300 w-full"
+              required
+            />
+            <p class="text-red-500 text-sm mt-1 hidden">
+              First name is required
+            </p>
+          </div>
+
+          <!-- Email -->
+          <div class="flex flex-col text-left">
+            <label class="mb-2 text-gray-700"
+              >Email Address <span class="text-red-500">*</span></label
+            >
+            <input
+              type="email"
+              name="email"
+              placeholder="Enter your email address"
+              class="rounded-xl border border-gray-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-300 w-full"
+              required
+            />
+            <p class="text-red-500 text-sm mt-1 hidden">
+              Please enter a valid email
+            </p>
+          </div>
+
+          <!-- Phone Number -->
+          <div class="flex flex-col text-left">
+            <label class="mb-2 text-gray-700">
+              Phone Number <span class="text-red-500">*</span>
+            </label>
+            <div class="flex gap-2">
+              <div
+                class="bg-gray-200 rounded-lg px-2 mg:px-4 py-3 flex items-center justify-center flex-shrink-0"
+              >
+                +234
+              </div>
+              <input
+                type="tel"
+                name="phone"
+                placeholder="Enter your phone number"
+                class="rounded-xl border border-gray-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-300 w-full w-full"
+                required
+              />
+            </div>
+            <p class="text-red-500 text-sm mt-1 hidden">
+              Phone number is required
+            </p>
+          </div>
+
+          <!-- Select -->
+          <div class="flex flex-col text-left relative">
+            <label class="mb-2 text-gray-700">How did you hear about us?</label>
+            <select
+              name="referral"
+              class="rounded-xl border border-gray-300 px-4 py-3 pr-10 focus:outline-none focus:ring-2 focus:ring-blue-300 w-full"
+            >
+              <option value="">Select an option</option>
+              <option value="social">Social Media</option>
+              <option value="friend">Friend / Referral</option>
+              <option value="ad">Advertisement</option>
+            </select>
+
+            <p class="text-red-500 text-sm mt-1 hidden">
+              Please select an option
+            </p>
+          </div>
+
+          <!-- Button -->
+          <button
+            type="submit"
+            class="bg-blue-500 text-white py-4 rounded-xl font-semibold hover:bg-blue-600 transition cursor-pointer w-full"
+          >
+            Get Early Access
+          </button>
+
+          <!-- Privacy note -->
+          <div
+            class="flex items-center justify-center gap-2 mt-4 text-gray-700 text-sm"
+          >
+            <img
+              src="assets/home/secure-spot/LockKey.svg"
+              alt="Privacy Icon"
+              class="h-4 w-4"
+            />
+            <span>We respect your privacy</span>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonials" class="py-16 bg-[#F8FCFE]">
+      <div class="max-w-7xl mx-auto px-6 text-center">
+        <!-- Header -->
+        <h2 class="text-3xl md:text-4xl font-bold">
+          Trusted by Patients and Doctors across Nigeria
+        </h2>
+
+        <!-- Description -->
+        <p class="mt-4 text-gray-600 max-w-2xl mx-auto">
+          See what our community has to say about their UbiMD experience
+        </p>
+
+        <!-- Cards -->
+        <div class="mt-20 grid grid-cols-1 md:grid-cols-2 gap-8">
+          <!-- Card 1 -->
+          <div
+            class="bg-white rounded-lg shadow-md p-6 flex flex-col gap-4 text-left group hover:shadow-xl transform hover:-translate-y-2 transition"
+          >
+            <div class="w-max">
+              <img
+                src="assets/home/testimonials/mingcute_quote-left-fill.svg"
+                alt="Quote Icon"
+                class="h-10 w-10"
+              />
+            </div>
+            <p class="text-gray-600 text-sm md:text-base">
+              UbiMD made it possible to see a doctor from my village without
+              travelling. The matching was perfect for my language! I spoke with
+              a doctor in Yoruba and got the help I needed
+            </p>
+            <div class="flex items-center gap-4 mt-4">
+              <div class="h-12 w-12 rounded-full overflow-hidden">
+                <img
+                  src="assets/home/testimonials/adebayo.png"
+                  alt="User 1"
+                  class="h-full w-full object-cover"
+                />
+              </div>
+              <div class="flex flex-col text-left">
+                <span class="font-semibold">Adebayo O.</span>
+                <p class="text-sm text-gray-500">Patient from Oyo State</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div
+            class="bg-white rounded-lg shadow-md p-6 flex flex-col gap-4 text-left group hover:shadow-xl transform hover:-translate-y-2 transition"
+          >
+            <div class="w-max">
+              <img
+                src="assets/home/testimonials/mingcute_quote-left-fill.svg"
+                alt="Quote Icon"
+                class="h-10 w-10"
+              />
+            </div>
+            <p class="text-gray-600 text-sm md:text-base">
+              As a doctor, UbiMD helps me reach patients in remote areas who
+              couldn’t access healthcare before. The platform works smoothly
+              even with poor internet connection.
+            </p>
+            <div class="flex items-center gap-4 mt-4">
+              <div class="h-12 w-12 rounded-full overflow-hidden">
+                <img
+                  src="assets/home/testimonials/chioma.jpg"
+                  alt="User 2"
+                  class="h-full w-full object-cover"
+                />
+              </div>
+              <div class="flex flex-col text-left">
+                <span class="font-semibold">Dr Chioma N.</span>
+                <p class="text-sm text-gray-500">General Practioner, Lagos</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div
+            class="bg-white rounded-lg shadow-md p-6 flex flex-col gap-4 text-left group hover:shadow-xl transform hover:-translate-y-2 transition"
+          >
+            <div class="w-max">
+              <img
+                src="assets/home/testimonials/mingcute_quote-left-fill.svg"
+                alt="Quote Icon"
+                class="h-10 w-10"
+              />
+            </div>
+            <p class="text-gray-600 text-sm md:text-base">
+              I love that I can ask quick questions on whatsapp without creating
+              an account. It’s so convinient and the responses are fast and
+              helpful. UbiMD understands what Nigerian needs
+            </p>
+            <div class="flex items-center gap-4 mt-4">
+              <div class="h-12 w-12 rounded-full overflow-hidden">
+                <img
+                  src="assets/home/testimonials/mariam.jpg"
+                  alt="User 3"
+                  class="h-full w-full object-cover"
+                />
+              </div>
+              <div class="flex flex-col text-left">
+                <span class="font-semibold">Mariam E.</span>
+                <p class="text-sm text-gray-500">Patient from Jos</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div
+            class="bg-white rounded-lg shadow-md p-6 flex flex-col gap-4 text-left group hover:shadow-xl transform hover:-translate-y-2 transition"
+          >
+            <div class="w-max">
+              <img
+                src="assets/home/testimonials/mingcute_quote-left-fill.svg"
+                alt="Quote Icon"
+                class="h-10 w-10"
+              />
+            </div>
+            <p class="text-gray-600 text-sm md:text-base">
+              UbiMD made it possible to see a doctor from my village without
+              travelling. The matching was perfect for my language! I spoke with
+              a doctor in Yoruba and got the help I needed
+            </p>
+            <div class="flex items-center gap-4 mt-4">
+              <div class="h-12 w-12 rounded-full overflow-hidden">
+                <img
+                  src="assets/home/testimonials/ibrahim.png"
+                  alt="User 4"
+                  class="h-full w-full object-cover"
+                />
+              </div>
+              <div class="flex flex-col text-left">
+                <span class="font-semibold">Ibrahim Y.</span>
+                <p class="text-sm text-gray-500">Patient from Kano State</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Rating stars -->
+        <div class="flex justify-center mt-20 gap-4">
+          <img
+            src="assets/home/testimonials/Star.svg"
+            alt="Star"
+            class="h-8 w-8"
+          />
+          <img
+            src="assets/home/testimonials/Star.svg"
+            alt="Star"
+            class="h-8 w-8"
+          />
+          <img
+            src="assets/home/testimonials/Star.svg"
+            alt="Star"
+            class="h-8 w-8"
+          />
+          <img
+            src="assets/home/testimonials/Star.svg"
+            alt="Star"
+            class="h-8 w-8"
+          />
+          <img
+            src="assets/home/testimonials/Star.svg"
+            alt="Star"
+            class="h-8 w-8"
+          />
+        </div>
+        <p class="mt-2 text-xs text-[#5C5C5C]">
+          Rated 5 stars by thousands of satisfied users across Nigeria
+        </p>
+      </div>
+    </section>
+
+    <!-- Steps -->
+    <section id="how-it-works" class="w-full bg-white py-16">
+      <div class="max-w-7xl mx-auto px-6 text-center">
+        <!-- Header -->
+        <h2 class="text-3xl font-bold text-gray-900 mb-4">
+          Get Started with UbiMD Today
+        </h2>
+
+        <!-- Description -->
+        <p class="text-gray-600 max-w-2xl mx-auto mb-12">
+          Access quality healthcare in four simple steps. It’s fast, easy and
+          designed for everyone
+        </p>
+
+        <!-- Steps Column -->
+        <div class="flex flex-col gap-20">
+          <!-- Step 1 -->
+          <div class="flex flex-col md:flex-row items-center gap-20">
+            <img
+              src="/assets/home/steps/step-one-img.png"
+              alt="Step 1"
+              class="w-full md:w-1/2 rounded-xl object-cover"
+            />
+
+            <div class="md:w-1/2 text-left">
+              <div class="flex items-center gap-3 mb-3">
+                <span class="text-6xl font-bold text-blue-100 leading-none">
+                  01
+                </span>
+                <div
+                  class="bg-blue-500 rounded-lg p-3 flex items-center justify-center"
+                >
+                  <img
+                    src="/assets/home/steps/UserPlus.svg"
+                    alt="icon"
+                    class="w-8 h-8"
+                  />
+                </div>
+              </div>
+
+              <h3 class="text-xl font-bold text-gray-800 mb-2">Sign Up</h3>
+
+              <p class="text-gray-600 max-w-sm">
+                Create your free account in minutes using your phone number or
+                email. No complicated forms or long wiating lines
+              </p>
+            </div>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="flex flex-col md:flex-row-reverse items-center gap-20">
+            <img
+              src="/assets/home/steps/step-two-img.png"
+              alt="Step 2"
+              class="w-full md:w-1/2 rounded-xl object-cover"
+            />
+
+            <div class="md:w-1/2 text-left">
+              <div class="flex items-center gap-3 mb-3">
+                <span class="text-6xl font-bold text-blue-100 leading-none">
+                  02
+                </span>
+                <div
+                  class="bg-blue-500 rounded-lg p-3 flex items-center justify-center"
+                >
+                  <img
+                    src="/assets/home/steps/Notepad.svg"
+                    alt="icon"
+                    class="w-8 h-8"
+                  />
+                </div>
+              </div>
+              <h3 class="text-xl font-bold text-gray-800 mb-2">
+                Describe Your Symptom
+              </h3>
+
+              <p class="text-gray-600 max-w-sm">
+                Create your free account in minutes using your phone number or
+                email. No complicated forms or long wiating lines
+              </p>
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="flex flex-col md:flex-row items-center gap-20">
+            <img
+              src="/assets/home/steps/step-three-img.png"
+              alt="Step 3"
+              class="w-full md:w-1/2 rounded-xl object-cover"
+            />
+
+            <div class="md:w-1/2 text-left">
+              <div class="flex items-center gap-3 mb-3">
+                <span class="text-6xl font-bold text-blue-100 leading-none">
+                  03
+                </span>
+                <div
+                  class="bg-blue-500 rounded-lg p-3 flex items-center justify-center"
+                >
+                  <img
+                    src="/assets/home/steps/UserPlus.svg"
+                    alt="icon"
+                    class="w-8 h-8"
+                  />
+                </div>
+              </div>
+
+              <h3 class="text-xl font-bold text-gray-800 mb-2">
+                Get Matched with a Doctor
+              </h3>
+
+              <p class="text-gray-600 max-w-sm">
+                Create your free account in minutes using your phone number or
+                email. No complicated forms or long wiating lines
+              </p>
+            </div>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="flex flex-col md:flex-row-reverse items-center gap-20">
+            <img
+              src="/assets/home/steps/step-four-img.png"
+              alt="Step 4"
+              class="w-full md:w-1/2 rounded-xl object-cover"
+            />
+
+            <div class="md:w-1/2 text-left">
+              <div class="flex items-center gap-3 mb-3">
+                <span class="text-6xl font-bold text-blue-100 leading-none">
+                  04
+                </span>
+                <div
+                  class="bg-blue-500 rounded-lg p-3 flex items-center justify-center"
+                >
+                  <img
+                    src="/assets/home/steps/Video.svg"
+                    alt="icon"
+                    class="w-8 h-8"
+                  />
+                </div>
+              </div>
+
+              <h3 class="text-xl font-bold text-gray-800 mb-2">
+                Consult via Video
+              </h3>
+
+              <p class="text-gray-600 max-w-sm">
+                Create your free account in minutes using your phone number or
+                email. No complicated forms or long wiating lines
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="w-full py-16 px-6">
+      <div
+        class="max-w-7xl mx-auto bg-blue-400 rounded-lg p-6 md:p-12 text-center text-white flex flex-col items-center"
+      >
+        <!-- Header -->
+        <h2 class="text-3xl md:text-4xl font-bold">
+          Ready to Transform Healthcare Access in Nigeria?
+        </h2>
+
+        <!-- Description -->
+        <p class="mt-4 text-sm md:text-base max-w-3xl text-blue-50">
+          Join thousands of Nigerians who are already experiencing better
+          healthcare access. Whether you’re in Lagos, port Harcourt a remote
+          village, quality medical care is just a click away
+        </p>
+
+        <!-- Buttons -->
+        <div class="mt-8 flex flex-col sm:flex-row gap-4">
+          <a href="#early-access">
+            <button
+              class="px-6 py-3 bg-white text-blue-400 font-medium rounded-lg shadow hover:bg-gray-100"
+            >
+              Join Waitlist
+            </button></a
+          >
+
+          <button
+            class="px-6 py-3 bg-blue-400 border border-white text-white font-medium rounded-lg hover:bg-blue-500"
+          >
+            Learn More
+          </button>
+        </div>
+
+        <!-- Bottom row -->
+        <div
+          class="mt-10 flex flex-col md:flex-row items-center justify-center gap-3"
+        >
+          <div class="flex items-center gap-1">
+            <img
+              src="/assets/home/cta/ShieldCheck.svg"
+              alt="Shield"
+              class="w-4 h-4"
+            />
+            <p class="text-white text-xs">100% verified Doctors</p>
+          </div>
+
+          <div class="flex items-center gap-1">
+            <img
+              src="/assets/home/cta/LockKey.svg"
+              alt="LockKey"
+              class="w-4 h-4"
+            />
+            <p class="text-white text-xs">Secure and Private</p>
+          </div>
+
+          <div class="flex items-center gap-1">
+            <img
+              src="./assets/home/cta/DeviceMobileCamera.svg"
+              alt="Device"
+              class="w-4 h-4"
+            />
+            <p class="text-white text-xs">Works on Any Device</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="w-full bg-[#052A33] text-white pt-10 pb-6">
+      <div
+        class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-12"
+      >
+        <!-- About -->
+        <div class="flex flex-col gap-4">
+          <!-- Logo -->
+          <div class="flex items-center gap-3">
+            <img
+              src="/assets/home/footer/Cylinder.svg"
+              alt="UbiMD Logo"
+              class="w-10 h-10"
+            />
+            <span class="text-2xl font-semibold">UbiMD</span>
+          </div>
+
+          <p class="text-sm leading-relaxed text-[#D6D6D6] max-w-xs">
+            Your trusted telemedicine platform for secure, efficient and
+            accessible healthcare consultation
+          </p>
+
+          <!-- Social Icons -->
+          <div class="flex items-center gap-4 mt-2">
+            <a
+              href="#"
+              class="bg-black rounded-full p-2 flex items-center justify-center cursor-pointer"
+            >
+              <img
+                src="/assets/home/footer/Facebook (1).svg"
+                class="w-6 h-6"
+                alt="Facebook"
+              />
+            </a>
+
+            <a
+              href="#"
+              class="bg-black rounded-full p-2 flex items-center justify-center cursor-pointer"
+            >
+              <img
+                src="/assets/home/footer/InstagramLogo.svg"
+                class="w-6 h-6"
+                alt="Instagram"
+              />
+            </a>
+
+            <a
+              href="#"
+              class="bg-black rounded-full p-2 flex items-center justify-center cursor-pointer"
+            >
+              <img
+                src="/assets/home/footer/LinkedinLogo.svg"
+                class="w-6 h-6"
+                alt="LinkedIn"
+              />
+            </a>
+
+            <a
+              href="#"
+              class="bg-black rounded-full p-2 flex items-center justify-center cursor-pointer"
+            >
+              <img
+                src="/assets/home/footer/TwitterLogo.svg"
+                class="w-6 h-6"
+                alt="Twitter"
+              />
+            </a>
+          </div>
+
+          <p class="text-xs text-gray-400 mt-4">
+            © 2024 UbiMD. All rights reserved
+          </p>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="flex flex-col gap-4">
+          <h3 class="text-lg font-semibold">Quick Links</h3>
+
+          <ul class="space-y-2 text-[#D6D6D6] text-sm">
+            <li><a href="#" class="hover:underline">Home</a></li>
+            <li><a href="#" class="hover:underline">Features</a></li>
+            <li><a href="#" class="hover:underline">Appointments</a></li>
+            <li><a href="#" class="hover:underline">About Us</a></li>
+          </ul>
+        </div>
+
+        <!-- Resources -->
+        <div class="flex flex-col gap-4">
+          <h3 class="text-lg font-semibold">Resources</h3>
+
+          <ul class="space-y-2 text-[#D6D6D6] text-sm">
+            <li><a href="#" class="hover:underline">Help Center</a></li>
+            <li><a href="#" class="hover:underline">Privacy Policy</a></li>
+            <li><a href="#" class="hover:underline">Terms of Services</a></li>
+            <li><a href="#" class="hover:underline">HIPPA Compliance</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Us -->
+        <div class="flex flex-col gap-4">
+          <h3 class="text-lg font-semibold">Contact Us</h3>
+
+          <div class="flex flex-col gap-3 text-[#D6D6D6] text-sm">
+            <div class="flex items-center gap-3">
+              <img src="/assets/home/footer/Envelope.svg" class="w-5 h-5" />
+              <span>support@ubimd.com</span>
+            </div>
+
+            <div class="flex items-center gap-3">
+              <img src="/assets/home/footer/Phone.svg" class="w-5 h-5" />
+              <span>1-800-UBIMD-HELP</span>
+            </div>
+
+            <div class="flex items-start gap-3">
+              <img src="/assets/home/footer/MapPin.svg" class="w-5 h-5 mt-1" />
+              <span>123 Healthcare Ave, Medical District CA 90210</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom bar -->
+      <div class="border-t border-white mt-10 pt-6">
+        <p class="text-center text-xs text-gray-400">
+          ©2025 UbiMD. All rights reserved. Empowering healthcare access across
+          Nigeria.
+        </p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
