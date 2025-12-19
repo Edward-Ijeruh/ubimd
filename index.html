@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon" />
     <title>UbiMD</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="styles.css" />
@@ -29,52 +30,84 @@
             class="h-8 w-8 swap-icon"
           />
 
-          <span class="text-2xl font-bold nav-text">UbiMD</span>
+          <span class="text-2xl font-bold nav-text" data-i18n="navbar.brand"
+            >UbiMD</span
+          >
         </div>
 
         <!-- Desktop menu -->
         <nav class="hidden md:flex items-center gap-8">
           <!-- Language selector -->
-          <div
-            class="flex items-center gap-2 cursor-pointer nav-text transition transform hover:scale-105"
-          >
-            <img
-              data-light="assets/home/navbar/globe.png"
-              data-dark="assets/home/navbar/black-globe.png"
-              src="assets/home/navbar/globe.png"
-              class="h-4 w-4 swap-icon"
-            />
-
-            <select
-              id="languageSelector"
-              class="bg-transparent nav-text outline-none cursor-pointer pr-2 py-1 text-white"
+          <div class="relative hidden md:block">
+            <button
+              id="langToggle"
+              class="flex items-center gap-2 nav-text cursor-pointer transition transform hover:scale-105"
             >
-              <option value="en">English</option>
-              <option value="ig">Igbo</option>
-              <option value="yo">Yoruba</option>
-              <option value="ha">Hausa</option>
-            </select>
+              <img
+                data-light="assets/home/navbar/globe.png"
+                data-dark="assets/home/navbar/black-globe.png"
+                src="assets/home/navbar/globe.png"
+                class="h-4 w-4 swap-icon"
+              />
+              <span id="langCurrent" data-i18n="navbar.language">English</span>
+              <img
+                data-light="assets/home/navbar/CaretDown.svg"
+                data-dark="assets/home/navbar/CaretDownBlack.svg"
+                src="assets/home/navbar/CaretDown.svg"
+                class="h-3 w-4 swap-icon"
+              />
+            </button>
+
+            <div
+              id="langMenu"
+              class="hidden absolute right-0 mt-2 p-2 w-40 bg-white shadow-lg rounded-lg overflow-hidden z-50 divide-y"
+            >
+              <div
+                class="lang-item px-4 py-2 hover:bg-gray-200 cursor-pointer rounded-lg"
+              >
+                English
+              </div>
+              <div
+                class="lang-item px-4 py-2 hover:bg-gray-200 cursor-pointer rounded-lg"
+              >
+                Igbo
+              </div>
+              <div
+                class="lang-item px-4 py-2 hover:bg-gray-200 cursor-pointer rounded-lg"
+              >
+                Yoruba
+              </div>
+              <div
+                class="lang-item px-4 py-2 hover:bg-gray-200 cursor-pointer rounded-lg"
+              >
+                Hausa
+              </div>
+            </div>
           </div>
 
           <a
             href="#features"
             class="nav-text transition transform hover:scale-105"
+            data-i18n="navbar.features"
             >Features</a
           >
           <a
             href="#testimonials"
             class="nav-text transition transform hover:scale-105"
+            data-i18n="navbar.testimonials"
             >Testimonials</a
           >
           <a
             href="#how-it-works"
             class="nav-text transition transform hover:scale-105"
+            data-i18n="navbar.how_it_works"
             >How it Works</a
           >
 
           <a href="#early-access"
             ><button
               class="px-5 py-2 bg-blue-500 text-white rounded-lg font-semibold shadow hover:bg-blue-600 transition"
+              data-i18n="navbar.join_waitlist"
             >
               Join Waitlist
             </button></a
@@ -102,38 +135,67 @@
 
         <nav class="flex flex-col items-center justify-center h-full w-full">
           <!-- Language selector -->
-          <div class="flex items-center gap-1 mb-4">
-            <img
-              src="assets/home/navbar/black-globe.png"
-              alt="Globe icon"
-              class="h-4 w-4"
-            />
-            <select
-              class="bg-transparent outline-none cursor-pointer pr-2 py-1 text-black"
+          <div class="relative flex md:hidden mb-4">
+            <button
+              id="langToggleMobile"
+              class="flex items-center gap-2 cursor-pointer text-black"
             >
-              <option value="en">English</option>
-              <option value="ig">Igbo</option>
-              <option value="yo">Yoruba</option>
-              <option value="ha">Hausa</option>
-            </select>
+              <img src="assets/home/navbar/black-globe.png" class="h-4 w-4" />
+              <span id="langCurrentMobile" data-i18n="navbar.language"
+                >English</span
+              >
+              <img
+                src="assets/home/navbar/CaretDownBlack.svg"
+                class="h-3 w-4"
+              />
+            </button>
+
+            <div
+              id="langMenuMobile"
+              class="hidden absolute top-6 left-1/2 -translate-x-1/2 mt-2 p-2 w-40 bg-white shadow-lg rounded-lg overflow-hidden z-50 divide-y"
+            >
+              <div
+                class="lang-item-mobile px-4 py-2 hover:bg-gray-100 cursor-pointer"
+              >
+                English
+              </div>
+              <div
+                class="lang-item-mobile px-4 py-2 hover:bg-gray-100 cursor-pointer"
+              >
+                Igbo
+              </div>
+              <div
+                class="lang-item-mobile px-4 py-2 hover:bg-gray-100 cursor-pointer"
+              >
+                Yoruba
+              </div>
+              <div
+                class="lang-item-mobile px-4 py-2 hover:bg-gray-100 cursor-pointer"
+              >
+                Hausa
+              </div>
+            </div>
           </div>
 
           <!-- Links -->
           <a
             href="#features"
             class="w-full text-center py-4 text-lg border-t border-gray-300"
+            data-i18n="navbar.features"
             onclick="closeMobileMenu()"
             >Features</a
           >
           <a
             href="#testimonials"
             class="w-full text-center py-4 text-lg border-t border-gray-300"
+            data-i18n="navbar.testimonials"
             onclick="closeMobileMenu()"
             >Testimonials</a
           >
           <a
             href="#how-it-works"
             class="w-full text-center py-4 text-lg border-y border-gray-300"
+            data-i18n="navbar.how_it_works"
             onclick="closeMobileMenu()"
             >How it Works</a
           >
@@ -142,6 +204,7 @@
           <a href="#early-access">
             <button
               class="py-2 px-6 mt-4 bg-blue-500 text-white rounded-lg text-lg"
+              data-i18n="navbar.join_waitlist"
               onclick="closeMobileMenu()"
             >
               Join Waitlist
@@ -175,10 +238,13 @@
             class="relative z-[3] flex items-center justify-center h-full text-center text-white px-6"
           >
             <div>
-              <h1 class="text-3xl md:text-5xl font-bold">
-                Healthcare Access for Every Nigerian
+              <h1
+                class="text-3xl md:text-5xl font-bold"
+                data-i18n="hero.slide1_title"
+              >
+                Consult From The Comfort of Your Home
               </h1>
-              <p class="mt-4 text-sm md:text-lg">
+              <p class="mt-4 text-sm md:text-lg" data-i18n="hero.slide1_sub">
                 Quality medical consultations from anywhere, even with slow
                 internet
               </p>
@@ -186,6 +252,7 @@
               <a href="#early-access">
                 <button
                   class="mt-6 px-6 py-3 bg-blue-500 text-white rounded-lg font-semibold shadow hover:bg-blue-600 transition"
+                  data-i18n="hero.join_waitlist"
                 >
                   Join Waitlist
                 </button>
@@ -214,16 +281,20 @@
             class="relative z-[3] flex items-center justify-center h-full text-center text-white px-6"
           >
             <div>
-              <h1 class="text-3xl md:text-5xl font-bold">
+              <h1
+                class="text-3xl md:text-5xl font-bold"
+                data-i18n="hero.slide2_title"
+              >
                 Verified Doctors You Can Trust
               </h1>
-              <p class="mt-4 text-sm md:text-lg">
+              <p class="mt-4 text-sm md:text-lg" data-i18n="hero.slide2_sub">
                 Licensed medical experts ready to assist in your preferred
                 language
               </p>
               <a href="#early-access">
                 <button
                   class="mt-6 px-6 py-3 bg-blue-500 text-white rounded-lg font-semibold shadow hover:bg-blue-600 transition"
+                  data-i18n="hero.join_waitlist"
                 >
                   Join Waitlist
                 </button>
@@ -252,15 +323,19 @@
             class="relative z-[3] flex items-center justify-center h-full text-center text-white px-6"
           >
             <div>
-              <h1 class="text-3xl md:text-5xl font-bold">
+              <h1
+                class="text-3xl md:text-5xl font-bold"
+                data-i18n="hero.slide3_title"
+              >
                 Connecting Doctors and Patients Remotely
               </h1>
-              <p class="mt-4 text-sm md:text-lg">
+              <p class="mt-4 text-sm md:text-lg" data-i18n="hero.slide3_sub">
                 Reliable video consultations available on any device
               </p>
               <a href="#early-access">
                 <button
                   class="mt-6 px-6 py-3 bg-blue-500 text-white rounded-lg font-semibold shadow hover:bg-blue-600 transition"
+                  data-i18n="hero.join_waitlist"
                 >
                   Join Waitlist
                 </button>
@@ -290,10 +365,13 @@
     <!-- Features -->
     <section id="features" class="py-16">
       <div class="max-w-7xl mx-auto px-6 text-center">
-        <h2 class="text-3xl md:text-4xl font-bold">
+        <h2
+          class="text-3xl md:text-4xl font-bold"
+          data-i18n="features_section.title"
+        >
           Designed for Accessibility and Efficiency in Nigeria
         </h2>
-        <p class="mt-4 text-gray-600">
+        <p class="mt-4 text-gray-600" data-i18n="features_section.subtitle">
           UbiMD offers a seamless and secure way to conduct remote
           consultations, enhancing patient care and practice efficiency
         </p>
@@ -321,10 +399,16 @@
                   />
                 </div>
               </div>
-              <h3 class="text-lg md:text-xl font-semibold">
+              <h3
+                class="text-lg md:text-xl font-semibold"
+                data-i18n="features_section.card1_title"
+              >
                 Secure Video Consultation
               </h3>
-              <p class="text-gray-600 text-sm md:text-base">
+              <p
+                class="text-gray-600 text-sm md:text-base"
+                data-i18n="features_section.card1_desc"
+              >
                 Face to face consultation that works seamlessly on 2G/3G
                 networks and other phones. Our optimized technology ensures you
                 connect with Doctors even with slow internet.
@@ -353,10 +437,16 @@
                   />
                 </div>
               </div>
-              <h3 class="text-lg md:text-xl font-semibold">
+              <h3
+                class="text-lg md:text-xl font-semibold"
+                data-i18n="features_section.card2_title"
+              >
                 Smart Doctor Matching
               </h3>
-              <p class="text-gray-600 text-sm md:text-base">
+              <p
+                class="text-gray-600 text-sm md:text-base"
+                data-i18n="features_section.card2_desc"
+              >
                 Get automatically paired with the right doctor based on your
                 symptoms, preferred language (English, Yoruba, Hausa, Igbo), and
                 location. Find the perfect match every time.
@@ -385,10 +475,16 @@
                   />
                 </div>
               </div>
-              <h3 class="text-lg md:text-xl font-semibold">
+              <h3
+                class="text-lg md:text-xl font-semibold"
+                data-i18n="features_section.card3_title"
+              >
                 AI Pill Identifier
               </h3>
-              <p class="text-gray-600 text-sm md:text-base">
+              <p
+                class="text-gray-600 text-sm md:text-base"
+                data-i18n="features_section.card3_desc"
+              >
                 Simply upload a photo of your medicine and our AI powered by
                 Google will identify it, explain its uses, and provide important
                 information. Always consult your doctor before any medication.
@@ -417,8 +513,16 @@
                   />
                 </div>
               </div>
-              <h3 class="text-lg md:text-xl font-semibold">WhatsApp Chatbot</h3>
-              <p class="text-gray-600 text-sm md:text-base">
+              <h3
+                class="text-lg md:text-xl font-semibold"
+                data-i18n="features_section.card4_title"
+              >
+                WhatsApp Chatbot
+              </h3>
+              <p
+                class="text-gray-600 text-sm md:text-base"
+                data-i18n="features_section.card4_desc"
+              >
                 Get instant answers to your health questions without logging in.
                 Quick, convenient, and always available when you need basic
                 health information.
@@ -447,8 +551,16 @@
                   />
                 </div>
               </div>
-              <h3 class="text-lg md:text-xl font-semibold">Verified Doctors</h3>
-              <p class="text-gray-600 text-sm md:text-base">
+              <h3
+                class="text-lg md:text-xl font-semibold"
+                data-i18n="features_section.card5_title"
+              >
+                Verified Doctors
+              </h3>
+              <p
+                class="text-gray-600 text-sm md:text-base"
+                data-i18n="features_section.card5_desc"
+              >
                 Every doctor in UbiMD is verified and licensed to practice in
                 Nigeria. Our rigorous verification system ensures you always
                 receive care from qualified medical professionals.
@@ -477,10 +589,16 @@
                   />
                 </div>
               </div>
-              <h3 class="text-lg md:text-xl font-semibold">
+              <h3
+                class="text-lg md:text-xl font-semibold"
+                data-i18n="features_section.card6_title"
+              >
                 Works on Any Device
               </h3>
-              <p class="text-gray-600 text-sm md:text-base">
+              <p
+                class="text-gray-600 text-sm md:text-base"
+                data-i18n="features_section.card6_desc"
+              >
                 Whether you have a smartphone, tablet, or basic feature phone,
                 UbiMD works for you. Designed for accessibility and efficiency
                 across all devices.
@@ -509,12 +627,15 @@
           </div>
 
           <!-- Main description -->
-          <p class="text-lg md:text-xl font-medium mb-2">
+          <p
+            class="text-lg md:text-xl font-medium mb-2"
+            data-i18n="stats.title"
+          >
             Empowering thousands of consultations across Nigeria
           </p>
 
           <!-- Smaller description -->
-          <p class="text-sm md:text-base text-[#5C5C5C]">
+          <p class="text-sm md:text-base text-[#5C5C5C]" data-i18n="stats.sub">
             Join the growing community of Nigerians accessing quality healthcare
             from anywhere
           </p>
@@ -534,16 +655,24 @@
             alt="Icon"
             class="h-5 w-5"
           />
-          <span>500+ People already on the waitlist</span>
+          <span data-i18n="early_access_section.banner"
+            >500+ People already on the waitlist</span
+          >
         </div>
 
         <!-- Header -->
-        <h2 class="text-3xl md:text-4xl font-bold mb-4">
+        <h2
+          class="text-3xl md:text-4xl font-bold mb-4"
+          data-i18n="early_access_section.title"
+        >
           Secure Your Spot Today
         </h2>
 
         <!-- Description -->
-        <p class="text-gray-600 mb-12 md:mb-16 px-2 md:px-0">
+        <p
+          class="text-gray-600 mb-12 md:mb-16 px-2 md:px-0"
+          data-i18n="early_access_section.sub"
+        >
           Join thousands of Nigerians waiting for better healthcare access
         </p>
 
@@ -554,7 +683,9 @@
         >
           <!-- First Name -->
           <div class="flex flex-col text-left">
-            <label class="mb-2 text-gray-700"
+            <label
+              class="mb-2 text-gray-700"
+              data-i18n-label="early_access_section.placeholder_name"
               >First Name <span class="text-red-500">*</span></label
             >
             <input
@@ -562,6 +693,7 @@
               name="firstName"
               placeholder="Enter your first name"
               class="rounded-xl border border-gray-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-300 w-full"
+              data-i18n-placeholder="early_access_section.placeholder_name"
               required
             />
             <p class="text-red-500 text-sm mt-1 hidden">
@@ -571,7 +703,9 @@
 
           <!-- Email -->
           <div class="flex flex-col text-left">
-            <label class="mb-2 text-gray-700"
+            <label
+              class="mb-2 text-gray-700"
+              data-i18n-label="early_access_section.placeholder_email"
               >Email Address <span class="text-red-500">*</span></label
             >
             <input
@@ -579,6 +713,7 @@
               name="email"
               placeholder="Enter your email address"
               class="rounded-xl border border-gray-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-300 w-full"
+              data-i18n-placeholder="early_access_section.placeholder_email"
               required
             />
             <p class="text-red-500 text-sm mt-1 hidden">
@@ -588,7 +723,10 @@
 
           <!-- Phone Number -->
           <div class="flex flex-col text-left">
-            <label class="mb-2 text-gray-700">
+            <label
+              class="mb-2 text-gray-700"
+              data-i18n-label="early_access_section.placeholder_phone"
+            >
               Phone Number <span class="text-red-500">*</span>
             </label>
             <div class="flex gap-2">
@@ -602,6 +740,7 @@
                 name="phone"
                 placeholder="Enter your phone number"
                 class="rounded-xl border border-gray-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-300 w-full w-full"
+                data-i18n-placeholder="early_access_section.placeholder_phone"
                 required
               />
             </div>
@@ -612,10 +751,15 @@
 
           <!-- Select -->
           <div class="flex flex-col text-left relative">
-            <label class="mb-2 text-gray-700">How did you hear about us?</label>
+            <label
+              class="mb-2 text-gray-700"
+              data-i18n-label="early_access_section.select_label"
+              >How did you hear about us?</label
+            >
             <select
               name="referral"
               class="rounded-xl border border-gray-300 px-4 py-3 pr-10 focus:outline-none focus:ring-2 focus:ring-blue-300 w-full"
+              data-i18n-placeholder="early_access_section.select_label"
             >
               <option value="">Select an option</option>
               <option value="social">Social Media</option>
@@ -632,6 +776,7 @@
           <button
             type="submit"
             class="bg-blue-500 text-white py-4 rounded-xl font-semibold hover:bg-blue-600 transition cursor-pointer w-full"
+            data-i18n="early_access_section.button_join"
           >
             Get Early Access
           </button>
@@ -645,7 +790,9 @@
               alt="Privacy Icon"
               class="h-4 w-4"
             />
-            <span>We respect your privacy</span>
+            <span data-i18n="early_access_section.privacy_notice"
+              >We respect your privacy</span
+            >
           </div>
         </form>
       </div>
@@ -655,12 +802,18 @@
     <section id="testimonials" class="py-16 bg-[#F8FCFE]">
       <div class="max-w-7xl mx-auto px-6 text-center">
         <!-- Header -->
-        <h2 class="text-3xl md:text-4xl font-bold">
+        <h2
+          class="text-3xl md:text-4xl font-bold"
+          data-i18n="testimonials_section.title"
+        >
           Trusted by Patients and Doctors across Nigeria
         </h2>
 
         <!-- Description -->
-        <p class="mt-4 text-gray-600 max-w-2xl mx-auto">
+        <p
+          class="mt-4 text-gray-600 max-w-2xl mx-auto"
+          data-i18n="testimonials_section.sub"
+        >
           See what our community has to say about their UbiMD experience
         </p>
 
@@ -677,7 +830,10 @@
                 class="h-10 w-10"
               />
             </div>
-            <p class="text-gray-600 text-sm md:text-base">
+            <p
+              class="text-gray-600 text-sm md:text-base"
+              data-i18n="testimonials_section.t1_text"
+            >
               UbiMD made it possible to see a doctor from my village without
               travelling. The matching was perfect for my language! I spoke with
               a doctor in Yoruba and got the help I needed
@@ -708,7 +864,10 @@
                 class="h-10 w-10"
               />
             </div>
-            <p class="text-gray-600 text-sm md:text-base">
+            <p
+              class="text-gray-600 text-sm md:text-base"
+              data-i18n="testimonials_section.t2_text"
+            >
               As a doctor, UbiMD helps me reach patients in remote areas who
               couldn’t access healthcare before. The platform works smoothly
               even with poor internet connection.
@@ -739,7 +898,10 @@
                 class="h-10 w-10"
               />
             </div>
-            <p class="text-gray-600 text-sm md:text-base">
+            <p
+              class="text-gray-600 text-sm md:text-base"
+              data-i18n="testimonials_section.t3_text"
+            >
               I love that I can ask quick questions on whatsapp without creating
               an account. It’s so convinient and the responses are fast and
               helpful. UbiMD understands what Nigerian needs
@@ -770,7 +932,10 @@
                 class="h-10 w-10"
               />
             </div>
-            <p class="text-gray-600 text-sm md:text-base">
+            <p
+              class="text-gray-600 text-sm md:text-base"
+              data-i18n="testimonials_section.t4_text"
+            >
               UbiMD made it possible to see a doctor from my village without
               travelling. The matching was perfect for my language! I spoke with
               a doctor in Yoruba and got the help I needed
@@ -819,7 +984,10 @@
             class="h-8 w-8"
           />
         </div>
-        <p class="mt-2 text-xs text-[#5C5C5C]">
+        <p
+          class="mt-2 text-xs text-[#5C5C5C]"
+          data-i18n="testimonials_section.rating_text"
+        >
           Rated 5 stars by thousands of satisfied users across Nigeria
         </p>
       </div>
@@ -829,12 +997,18 @@
     <section id="how-it-works" class="w-full bg-white py-16">
       <div class="max-w-7xl mx-auto px-6 text-center">
         <!-- Header -->
-        <h2 class="text-3xl font-bold text-gray-900 mb-4">
+        <h2
+          class="text-3xl font-bold text-gray-900 mb-4"
+          data-i18n="how_it_works_section.title"
+        >
           Get Started with UbiMD Today
         </h2>
 
         <!-- Description -->
-        <p class="text-gray-600 max-w-2xl mx-auto mb-12">
+        <p
+          class="text-gray-600 max-w-2xl mx-auto mb-12"
+          data-i18n="how_it_works_section.sub"
+        >
           Access quality healthcare in four simple steps. It’s fast, easy and
           designed for everyone
         </p>
@@ -865,9 +1039,17 @@
                 </div>
               </div>
 
-              <h3 class="text-xl font-bold text-gray-800 mb-2">Sign Up</h3>
+              <h3
+                class="text-xl font-bold text-gray-800 mb-2"
+                data-i18n="how_it_works_section.step1_title"
+              >
+                Sign Up
+              </h3>
 
-              <p class="text-gray-600 max-w-sm">
+              <p
+                class="text-gray-600 max-w-sm"
+                data-i18n="how_it_works_section.step1_desc"
+              >
                 Create your free account in minutes using your phone number or
                 email. No complicated forms or long wiating lines
               </p>
@@ -897,13 +1079,19 @@
                   />
                 </div>
               </div>
-              <h3 class="text-xl font-bold text-gray-800 mb-2">
+              <h3
+                class="text-xl font-bold text-gray-800 mb-2"
+                data-i18n="how_it_works_section.step2_title"
+              >
                 Describe Your Symptom
               </h3>
 
-              <p class="text-gray-600 max-w-sm">
-                Create your free account in minutes using your phone number or
-                email. No complicated forms or long wiating lines
+              <p
+                class="text-gray-600 max-w-sm"
+                data-i18n="how_it_works_section.step2_desc"
+              >
+                Provide your symptoms and medical concerns in a simple guided
+                form. This helps match you to the right doctor.
               </p>
             </div>
           </div>
@@ -932,13 +1120,19 @@
                 </div>
               </div>
 
-              <h3 class="text-xl font-bold text-gray-800 mb-2">
+              <h3
+                class="text-xl font-bold text-gray-800 mb-2"
+                data-i18n="how_it_works_section.step3_title"
+              >
                 Get Matched with a Doctor
               </h3>
 
-              <p class="text-gray-600 max-w-sm">
-                Create your free account in minutes using your phone number or
-                email. No complicated forms or long wiating lines
+              <p
+                class="text-gray-600 max-w-sm"
+                data-i18n="how_it_works_section.step3_desc"
+              >
+                Our smart matching system connects you to a specialist who
+                speaks your preferred language and fits your needs.
               </p>
             </div>
           </div>
@@ -967,13 +1161,19 @@
                 </div>
               </div>
 
-              <h3 class="text-xl font-bold text-gray-800 mb-2">
-                Consult via Video
+              <h3
+                class="text-xl font-bold text-gray-800 mb-2"
+                data-i18n="how_it_works_section.step4_title"
+              >
+                Start Consultation
               </h3>
 
-              <p class="text-gray-600 max-w-sm">
-                Create your free account in minutes using your phone number or
-                email. No complicated forms or long wiating lines
+              <p
+                class="text-gray-600 max-w-sm"
+                data-i18n="how_it_works_section.step4_desc"
+              >
+                Begin video chat or message the doctor instantly. Receive
+                medical guidance designed just for you.
               </p>
             </div>
           </div>
@@ -987,12 +1187,18 @@
         class="max-w-7xl mx-auto bg-blue-400 rounded-lg p-6 md:p-12 text-center text-white flex flex-col items-center"
       >
         <!-- Header -->
-        <h2 class="text-3xl md:text-4xl font-bold">
+        <h2
+          class="text-3xl md:text-4xl font-bold"
+          data-i18n="cta_section.title"
+        >
           Ready to Transform Healthcare Access in Nigeria?
         </h2>
 
         <!-- Description -->
-        <p class="mt-4 text-sm md:text-base max-w-3xl text-blue-50">
+        <p
+          class="mt-4 text-sm md:text-base max-w-3xl text-blue-50"
+          data-i18n="cta_section.sub"
+        >
           Join thousands of Nigerians who are already experiencing better
           healthcare access. Whether you’re in Lagos, port Harcourt a remote
           village, quality medical care is just a click away
@@ -1003,6 +1209,7 @@
           <a href="#early-access">
             <button
               class="px-6 py-3 bg-white text-blue-400 font-medium rounded-lg shadow hover:bg-gray-100"
+              data-i18n="common.join_waitlist"
             >
               Join Waitlist
             </button></a
@@ -1010,6 +1217,7 @@
 
           <button
             class="px-6 py-3 bg-blue-400 border border-white text-white font-medium rounded-lg hover:bg-blue-500"
+            data-i18n="common.learn_more"
           >
             Learn More
           </button>
@@ -1025,7 +1233,12 @@
               alt="Shield"
               class="w-4 h-4"
             />
-            <p class="text-white text-xs">100% verified Doctors</p>
+            <p
+              class="text-white text-xs"
+              data-i18n="cta_section.verified_doctors"
+            >
+              100% verified Doctors
+            </p>
           </div>
 
           <div class="flex items-center gap-1">
@@ -1034,7 +1247,12 @@
               alt="LockKey"
               class="w-4 h-4"
             />
-            <p class="text-white text-xs">Secure and Private</p>
+            <p
+              class="text-white text-xs"
+              data-i18n="cta_section.secure_private"
+            >
+              Secure and Private
+            </p>
           </div>
 
           <div class="flex items-center gap-1">
@@ -1043,7 +1261,12 @@
               alt="Device"
               class="w-4 h-4"
             />
-            <p class="text-white text-xs">Works on Any Device</p>
+            <p
+              class="text-white text-xs"
+              data-i18n="cta_section.works_any_device"
+            >
+              Works on Any Device
+            </p>
           </div>
         </div>
       </div>
@@ -1066,7 +1289,10 @@
             <span class="text-2xl font-semibold">UbiMD</span>
           </div>
 
-          <p class="text-sm leading-relaxed text-[#D6D6D6] max-w-xs">
+          <p
+            class="text-sm leading-relaxed text-[#D6D6D6] max-w-xs"
+            data-i18n="footer.about"
+          >
             Your trusted telemedicine platform for secure, efficient and
             accessible healthcare consultation
           </p>
@@ -1118,20 +1344,38 @@
             </a>
           </div>
 
-          <p class="text-xs text-gray-400 mt-4">
+          <p class="text-xs text-gray-400 mt-4" data-i18n="footer.rights">
             © 2024 UbiMD. All rights reserved
           </p>
         </div>
 
         <!-- Quick Links -->
         <div class="flex flex-col gap-4">
-          <h3 class="text-lg font-semibold">Quick Links</h3>
+          <h3 class="text-lg font-semibold" data-i18n="footer.quick_links">
+            Quick Links
+          </h3>
 
           <ul class="space-y-2 text-[#D6D6D6] text-sm">
-            <li><a href="#" class="hover:underline">Home</a></li>
-            <li><a href="#" class="hover:underline">Features</a></li>
-            <li><a href="#" class="hover:underline">Appointments</a></li>
-            <li><a href="#" class="hover:underline">About Us</a></li>
+            <li>
+              <a href="#" class="hover:underline" data-i18n="footer.help_center"
+                >Help Center</a
+              >
+            </li>
+            <li>
+              <a href="#" class="hover:underline" data-i18n="footer.privacy"
+                >Privacy Policy</a
+              >
+            </li>
+            <li>
+              <a href="#" class="hover:underline" data-i18n="footer.terms"
+                >Terms of Services</a
+              >
+            </li>
+            <li>
+              <a href="#" class="hover:underline" data-i18n="footer.hippa"
+                >HIPPA Compliance</a
+              >
+            </li>
           </ul>
         </div>
 
@@ -1140,7 +1384,11 @@
           <h3 class="text-lg font-semibold">Resources</h3>
 
           <ul class="space-y-2 text-[#D6D6D6] text-sm">
-            <li><a href="#" class="hover:underline">Help Center</a></li>
+            <li>
+              <a href="#" class="hover:underline" data-i18n="footer.help_center"
+                >Help Center</a
+              >
+            </li>
             <li><a href="#" class="hover:underline">Privacy Policy</a></li>
             <li><a href="#" class="hover:underline">Terms of Services</a></li>
             <li><a href="#" class="hover:underline">HIPPA Compliance</a></li>

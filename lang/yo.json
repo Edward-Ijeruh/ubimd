@@ -1,0 +1,127 @@
+{
+  "navbar": {
+    "brand": "UbiMD",
+    "language": "Ede",
+    "features": "Awọn Ẹya",
+    "testimonials": "Awọn Eri",
+    "how_it_works": "Bá A Ṣe Nṣiṣẹ",
+    "join_waitlist": "Darapọ mọ Atokọ"
+  },
+
+  "hero": {
+    "slide1_title": "Ṣàbẹwò Láti Ibi Itunu Ilé Rẹ",
+    "slide1_sub": "Ijumọsọrọ ilera lati ibikibi, paapaa pẹlu intanẹẹti tí kò lagbara",
+
+    "slide2_title": "Awon Dokita Tó Láṣẹ",
+    "slide2_sub": "Awon amoye tí wọ́n ní iwe-aṣẹ lati ran ọ lọwọ ní ede tí o ye ọ",
+
+    "slide3_title": "Asopọ Dokita ati Alaisan Latọna Jinna",
+    "slide3_sub": "Ibaraẹnisọrọ fidio tí o pe lori ẹrọ kankan",
+
+    "join_waitlist": "Darapọ mọ Atokọ"
+  },
+
+  "features_section": {
+    "title": "A Ṣe E Fun Rọrun Ni Nigeria",
+    "subtitle": "UbiMD n pese ijumọsọrọ ilera latọna jijin ti o dan, ti o daabobo ati ti o yara",
+
+    "card1_title": "Ibaraẹnisọrọ Fidio To Ni Idaabobo",
+    "card1_desc": "Ibaraẹnisọrọ oju-si-oju tí o ṣiṣẹ daradara lori intanẹẹti 2G/3G ati foonu atijọ.",
+
+    "card2_title": "Ifamọra Dokita Laifọwọyi",
+    "card2_desc": "A máa so ọ pọ mọ dokita ti o dara julọ da lori ami aisan rẹ ati ede ti o fẹ.",
+
+    "card3_title": "AI Idanimọ Oògùn",
+    "card3_desc": "Gbe fọto oogun rẹ sori ẹrọ, a ó sọ iru oogun naa ati bi a ṣe nlo o.",
+
+    "card4_title": "Botini WhatsApp",
+    "card4_desc": "Gba idahun iyara lori awọn ibeere ilera lai dákọọlẹ.",
+
+    "card5_title": "Awon Dokita Tó Láṣẹ",
+    "card5_desc": "Gbogbo dokita lori UbiMD ni iwe-aṣẹ lati ṣiṣẹ ni Nigeria.",
+
+    "card6_title": "Nṣiṣẹ lori Ohunkohun",
+    "card6_desc": "UbiMD n ṣiṣẹ lori gbogbo foonu ati ẹrọ kankan."
+  },
+
+  "stats": {
+    "title": "Syeed Ilera Tó Ṣegbe",
+    "sub": "Nṣiṣẹ fun awọn dokita ati alaisan kaakiri Nigeria",
+    "stat1_label": "Nọmba Dokita To Forukọsilẹ",
+    "stat2_label": "Nọmba Alaisan Ti A Ran",
+    "stat3_label": "Ijumọsọrọ To Ṣe Aseyori"
+  },
+
+  "how_it_works_section": {
+    "title": "Bẹrẹ Pẹlu UbiMD Loni",
+    "sub": "Gba iranlowo ilera ni igbesẹ mẹrin ti o rọọrun",
+
+    "step1_num": "01",
+    "step1_title": "Forukọsilẹ",
+    "step1_desc": "Ṣẹda iroyin ọfẹ pẹlu imeeli rẹ tabi nọmba foonu.",
+
+    "step2_num": "02",
+    "step2_title": "Ṣàlàyé Aami Aisan Rẹ",
+    "step2_desc": "Ṣalaye iṣoro ilera rẹ ni ọna ti o rọọrun lati ba dokita ti o tọ pade.",
+
+    "step3_num": "03",
+    "step3_title": "Darapọ mọ Dokita",
+    "step3_desc": "A ó so ọ pọ mọ dokita tí o ba ede ati ibeere rẹ mu.",
+
+    "step4_num": "04",
+    "step4_title": "Bẹrẹ Ijumọsọrọ",
+    "step4_desc": "Bẹrẹ fidio tabi ọrọ lẹsẹkẹsẹ ki o gba imọran to pe."
+  },
+
+  "testimonials_section": {
+    "title": "Awon eniyan kaakiri Nigeria n lo o",
+    "sub": "Ka ohun tí awọn olumulo sọ nipa UbiMD",
+
+    "t1_text": "UbiMD ran mi lọwọ lati ri dokita lai rin irin ajo gigun. A ba mi sọrọ ni Yoruba ati o rọọrun gidi.",
+
+    "t2_text": "Gẹgẹ bí dokita, UbiMD n jẹ ki n de ọdọ awọn alaisan ni ibi tí o jina.",
+
+    "t3_text": "Mo feran botini WhatsApp pupọ. O yara, rọrun ati o munadoko.",
+
+    "t4_text": "Mo ri dokita ti nsọrọ Hausa laisi kuro ni ile. O rọọrun gan-an.",
+    "rating_text": "Ti ṣe ayẹwo irawọ 5 nipasẹ ẹgbẹẹgbẹẹ awọn olumulo ti o ni itẹlọrun kọja Naijiria"
+  },
+
+  "cta_section": {
+    "title": "Kọkọ Gba Iriri UbiMD",
+    "sub": "Ilera latọna jijin fun awọn ara Nigeria",
+    "button": "Darapọ mọ Atokọ",
+    "verified_doctors": "Awọn Dokita 100% ti a fọwọsi",
+    "secure_private": "Ailewu ati Aladani",
+    "works_any_device": "Ṣiṣẹ lori Ẹrọ eyikeyi"
+  },
+
+  "early_access_section": {
+    "banner": "Awon eniyan 500+ ti darapọ mọ tẹlẹ",
+    "title": "Forukọsilẹ Bayi",
+    "sub": "Darapọ mọ awọn ara Nigeria tí o n reti iraye ilera to dara",
+
+    "placeholder_name": "Tẹ orukọ akọkọ rẹ",
+    "placeholder_email": "Tẹ imeeli rẹ",
+    "placeholder_phone": "Tẹ nọmba foonu rẹ",
+
+    "select_label": "Bawo ni o ti gbọ nipa wa?",
+    "button_join": "Gba Iraye Akọkọ",
+    "privacy_notice": "A bọ aabo data rẹ"
+  },
+
+  "footer": {
+    "about": "Nipa Wa",
+    "contact": "Kan Si Wa",
+    "privacy": "Ilana Asiri",
+    "terms": "Awọn Ofin",
+    "rights": "Gbogbo ẹtọ wa ni idaabobo.",
+    "help_center": "Ile Iranlọwọ"
+  },
+
+  "common": {
+    "join_waitlist": "Darapọ mọ Atokọ",
+    "learn_more": "Kọ ẹ sii",
+    "get_started": "Bẹrẹ Bayii"
+  }
+}

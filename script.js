@@ -37,11 +37,112 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
       const navbarHeight = document.getElementById("navbar").offsetHeight;
       const elementPosition =
         targetEl.getBoundingClientRect().top + window.pageYOffset;
-      const offsetPosition = elementPosition - navbarHeight - 5;
+      const offsetPosition = elementPosition - navbarHeight;
       window.scrollTo({ top: offsetPosition, behavior: "smooth" });
     }
   });
 });
+
+// Language selector
+const langToggle = document.getElementById("langToggle");
+const langMenu = document.getElementById("langMenu");
+const langCurrent = document.getElementById("langCurrent");
+
+const langToggleMobile = document.getElementById("langToggleMobile");
+const langMenuMobile = document.getElementById("langMenuMobile");
+const langCurrentMobile = document.getElementById("langCurrentMobile");
+
+langToggle?.addEventListener("click", (e) => {
+  e.stopPropagation();
+  langMenu.classList.toggle("hidden");
+});
+
+langToggleMobile?.addEventListener("click", (e) => {
+  e.stopPropagation();
+  langMenuMobile.classList.toggle("hidden");
+});
+
+document.querySelectorAll(".lang-item").forEach((item) => {
+  item.addEventListener("click", () => {
+    langCurrent.textContent = item.textContent;
+    langMenu.classList.add("hidden");
+  });
+});
+
+document.querySelectorAll(".lang-item-mobile").forEach((item) => {
+  item.addEventListener("click", () => {
+    langCurrentMobile.textContent = item.textContent;
+    langMenuMobile.classList.add("hidden");
+  });
+});
+
+// Close when clicking outside
+document.addEventListener("click", () => {
+  langMenu?.classList.add("hidden");
+  langMenuMobile?.classList.add("hidden");
+});
+
+// Function to switch
+const defaultLang = "en";
+let currentLang = localStorage.getItem("lang") || defaultLang;
+document.documentElement.setAttribute("lang", currentLang);
+
+// Function to translate page elements
+function translatePage(langData) {
+  document.querySelectorAll("[data-i18n]").forEach((el) => {
+    const key = el.getAttribute("data-i18n");
+    const text = key.split(".").reduce((o, i) => o[i], langData);
+    if (text) el.innerText = text;
+  });
+}
+
+// Load language JSON and apply translations
+async function loadLanguage(lang) {
+  const res = await fetch(`/lang/${lang}.json`);
+  const langData = await res.json();
+
+  localStorage.setItem("lang", lang);
+  currentLang = lang;
+
+  translatePage(langData);
+
+  const langNameMap = {
+    en: "English",
+    ig: "Igbo",
+    ha: "Hausa",
+    yo: "Yoruba",
+  };
+
+  document.getElementById("langCurrent").innerText =
+    langNameMap[lang] || "Language";
+  document.getElementById("langCurrentMobile").innerText =
+    langNameMap[lang] || "Language";
+}
+
+// Event listeners for desktop language items
+document.querySelectorAll(".lang-item").forEach((item) => {
+  item.addEventListener("click", () => {
+    const langName = item.innerText.trim().toLowerCase();
+    if (langName === "english") loadLanguage("en");
+    if (langName === "igbo") loadLanguage("ig");
+    if (langName === "hausa") loadLanguage("ha");
+    if (langName === "yoruba") loadLanguage("yo");
+  });
+});
+
+// Event listeners for mobile language items
+document.querySelectorAll(".lang-item-mobile").forEach((item) => {
+  item.addEventListener("click", () => {
+    const langName = item.innerText.trim().toLowerCase();
+    if (langName === "english") loadLanguage("en");
+    if (langName === "igbo") loadLanguage("ig");
+    if (langName === "hausa") loadLanguage("ha");
+    if (langName === "yoruba") loadLanguage("yo");
+  });
+});
+
+// Initialize page with current language
+loadLanguage(currentLang);
 
 // MOBILE MENU
 const mobileBtn = document.getElementById("mobileMenuBtn");
