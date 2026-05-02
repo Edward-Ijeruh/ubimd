@@ -1,39 +1,70 @@
-# UbiMD - Landing Page (v1)
+# UbiMD - Frontend Platform
 
-UbiMD is a healthcare-focused platform aimed at improving access to medical services across Nigeria.  
-This repository contains **Version 1** of the **UbiMD landing page** only.
+UbiMD is a modern telemedicine platform designed to make healthcare in Nigeria feel immediate, accessible, and human.
 
-This version is focused on:
+This repository contains the **current frontend application** built with React. It represents the active product direction beyond the initial landing page.
 
-- Introducing the UbiMD brand
-- Explaining key features and value proposition
-- Collecting early access / waitlist sign-ups
+---
 
-> This is an early-stage version and **not the full product**.
+## Overview
+
+UbiMD connects patients to verified doctors in minutes through a fast, secure, and intuitive web experience.
+
+The platform focuses on:
+
+- Instant access to healthcare
+- Clean, premium user experience
+- Reliability across real network conditions
+- Trust through verified medical professionals
 
 ---
 
 ## Tech Stack
 
-- HTML
+- React (Vite)
+- TypeScript
 - Tailwind CSS
-- JavaScript
-- Responsive design (desktop & mobile)
+- React Router
+- Framer Motion
+- Lucide Icons
 
 ---
 
-## Current Status
+## Features
 
-- Landing page UI
-- Responsive navbar and hero section
-- Early access / waitlist section
-- Backend integration not included
-- Full product features not included
+### Core UI
+
+- Fully responsive design across mobile and desktop
+- Premium UI system with consistent theming
+- Animated transitions and micro-interactions
+
+### Navigation
+
+- Dynamic navbar with active state detection
+- Mobile drawer navigation with animations
+- Footer aligned with application routes
+
+### Pages Implemented
+
+- Home
+- About
+- Contact
+- Pricing
+- For Patients
+- For Providers
+
+### Components
+
+- Hero sections with image transitions
+- Feature sections with structured layouts
+- Testimonials and pricing blocks
+- CTA sections with consistent styling
+- Reusable UI patterns across pages
 
 ---
 
-## Contact
+## Routing
 
-For inquiries related to UbiMD, please contact the project owner.
+Client-side routing is handled using React Router.
 
-© 2025 UbiMD. All rights reserved.
+---
