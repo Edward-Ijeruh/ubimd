@@ -53,13 +53,23 @@ export default function HomePage() {
 
           {/* CTAs */}
           <div className="flex flex-col sm:flex-row gap-3 pt-2 w-full md:w-auto">
-            <button className="w-full sm:w-auto bg-[color:var(--teal)] text-white px-6 py-3 rounded-full font-semibold shadow-[var(--shadow)] hover:scale-[1.02] transition cursor-pointer">
+            <a
+              href="https://app.ubimd.com/dashboard/auth/signup"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full sm:w-auto bg-[color:var(--teal)] text-white px-6 py-3 rounded-full font-semibold shadow-[var(--shadow)] hover:scale-[1.02] transition cursor-pointer"
+            >
               Book consultation
-            </button>
+            </a>
 
-            <button className="w-full sm:w-auto border border-[color:var(--border)] text-[color:var(--teal-dark)] border border-[color:var(--teal)] px-6 py-3 rounded-full font-semibold hover:bg-[color:var(--teal-light)] transition cursor-pointer">
+            <a
+              href="https://app.ubimd.com/dashboard/auth/signup"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full sm:w-auto border border-[color:var(--border)] text-[color:var(--teal-dark)] border border-[color:var(--teal)] px-6 py-3 rounded-full font-semibold hover:bg-[color:var(--teal-light)] transition cursor-pointer"
+            >
               Become a doctor
-            </button>
+            </a>
           </div>
 
           {/* Feature grid */}
@@ -565,11 +575,21 @@ export default function HomePage() {
 
           {/* Buttons */}
           <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <a className="w-full sm:w-auto bg-white text-[color:var(--teal-dark)] px-8 py-3.5 rounded-full font-semibold shadow-lg hover:scale-[1.03] hover:shadow-xl transition-all duration-300 text-center cursor-pointer">
+            <a
+              href="https://app.ubimd.com/dashboard/auth/signup"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full sm:w-auto bg-white text-[color:var(--teal-dark)] px-8 py-3.5 rounded-full font-semibold shadow-lg hover:scale-[1.03] hover:shadow-xl transition-all duration-300 text-center cursor-pointer"
+            >
               Book Consultation
             </a>
 
-            <a className="w-full sm:w-auto px-8 py-3.5 rounded-full font-semibold border border-white/30 text-white hover:bg-white/10 transition-all duration-300 text-center backdrop-blur cursor-pointer">
+            <a
+              href="https://app.ubimd.com/dashboard/auth/signup"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full sm:w-auto px-8 py-3.5 rounded-full font-semibold border border-white/30 text-white hover:bg-white/10 transition-all duration-300 text-center backdrop-blur cursor-pointer"
+            >
               Join as Provider
             </a>
           </div>

@@ -70,7 +70,7 @@ export default function Pricing() {
       </section>
 
       {/* Pricing cards */}
-      <section className="py-28 px-6 md:px-16 bg-white">
+      <section id="pricing" className="py-28 px-6 md:px-16 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-3 gap-8 items-stretch">
             {/* Basic */}
@@ -226,13 +226,19 @@ export default function Pricing() {
 
           {/* CTA buttons */}
           <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <button className="w-full sm:w-auto bg-white text-[color:var(--teal-dark)] px-8 py-3.5 rounded-full font-semibold shadow-lg hover:scale-[1.03] transition cursor-pointer">
+            <a
+              href="#pricing"
+              className="w-full sm:w-auto bg-white text-[color:var(--teal-dark)] px-8 py-3.5 rounded-full font-semibold shadow-lg hover:scale-[1.03] transition cursor-pointer"
+            >
               Choose a plan
-            </button>
+            </a>
 
-            <button className="w-full sm:w-auto px-8 py-3.5 rounded-full border border-white/30 text-white hover:bg-white/10 transition backdrop-blur cursor-pointer">
+            <a
+              href="#pricing"
+              className="w-full sm:w-auto px-8 py-3.5 rounded-full border border-white/30 text-white hover:bg-white/10 transition backdrop-blur cursor-pointer"
+            >
               Compare pricing
-            </button>
+            </a>
           </div>
 
           {/* trust indicators */}

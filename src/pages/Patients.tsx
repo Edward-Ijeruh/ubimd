@@ -34,13 +34,21 @@ export default function Patients() {
 
           {/* CTAs */}
           <div className="flex flex-col sm:flex-row gap-3 pt-2 w-full md:w-auto">
-            <button className="w-full sm:w-auto bg-[color:var(--teal)] text-white px-6 py-3 rounded-full font-semibold shadow-[var(--shadow)] hover:scale-[1.03] hover:shadow-lg transition-all duration-300 cursor-pointer">
+            <a
+              href="https://app.ubimd.com/dashboard/auth/signup"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full sm:w-auto bg-[color:var(--teal)] text-white px-6 py-3 rounded-full font-semibold shadow-[var(--shadow)] hover:scale-[1.03] hover:shadow-lg transition-all duration-300 cursor-pointer"
+            >
               Start consultation
-            </button>
+            </a>
 
-            <button className="w-full sm:w-auto border border-[color:var(--border)] text-[color:var(--teal-dark)] border border-[color:var(--teal)] px-6 py-3 rounded-full font-semibold hover:bg-[color:var(--teal-light)] transition cursor-pointer">
+            <a
+              href="#how-it-works"
+              className="w-full sm:w-auto border border-[color:var(--border)] text-[color:var(--teal-dark)] border border-[color:var(--teal)] px-6 py-3 rounded-full font-semibold hover:bg-[color:var(--teal-light)] transition cursor-pointer"
+            >
               How it works
-            </button>
+            </a>
           </div>
 
           {/* Trust indicators */}
@@ -83,7 +91,10 @@ export default function Patients() {
       </section>
 
       {/* How it works */}
-      <section className="relative bg-[color:var(--off-white)] py-28 px-6 md:px-16 overflow-hidden">
+      <section
+        id="how-it-works"
+        className="relative bg-[color:var(--off-white)] py-28 px-6 md:px-16 overflow-hidden"
+      >
         <div className="relative max-w-7xl mx-auto">
           {/* Header */}
           <div className="text-center max-w-2xl mx-auto mb-24">
@@ -504,13 +515,21 @@ export default function Patients() {
 
           {/* CTA buttons */}
           <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <button className="w-full sm:w-auto bg-white text-[color:var(--teal-dark)] px-8 py-3.5 rounded-full font-semibold shadow-lg hover:scale-[1.03] transition cursor-pointer">
+            <a
+              href="https://app.ubimd.com/dashboard/auth/signup"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full sm:w-auto bg-white text-[color:var(--teal-dark)] px-8 py-3.5 rounded-full font-semibold shadow-lg hover:scale-[1.03] transition cursor-pointer"
+            >
               Talk to a doctor now
-            </button>
+            </a>
 
-            <button className="w-full sm:w-auto px-8 py-3.5 rounded-full border border-white/30 text-white hover:bg-white/10 transition backdrop-blur cursor-pointer">
+            <a
+              href="#how-it-works"
+              className="w-full sm:w-auto px-8 py-3.5 rounded-full border border-white/30 text-white hover:bg-white/10 transition backdrop-blur cursor-pointer"
+            >
               Learn how it works
-            </button>
+            </a>
           </div>
 
           {/* trust indicators */}

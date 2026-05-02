@@ -30,13 +30,21 @@ export default function Providers() {
 
           {/* CTAs */}
           <div className="flex flex-col sm:flex-row gap-3 pt-2 w-full md:w-auto">
-            <button className="bg-[color:var(--teal)] text-white px-6 py-3 rounded-full font-semibold shadow-[var(--shadow)] hover:scale-[1.03] transition cursor-pointer">
+            <a
+              href="https://app.ubimd.com/dashboard/auth/signup"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-[color:var(--teal)] text-white px-6 py-3 rounded-full font-semibold shadow-[var(--shadow)] hover:scale-[1.03] transition cursor-pointer"
+            >
               Join as a provider
-            </button>
+            </a>
 
-            <button className="border border-[color:var(--border)] px-6 py-3 rounded-full  border border-[color:var(--teal)] font-semibold hover:bg-[color:var(--teal-light)] transition cursor-pointer">
-              Learn more
-            </button>
+            <a
+              href="#how-it-works"
+              className="border border-[color:var(--border)] px-6 py-3 rounded-full  border border-[color:var(--teal)] font-semibold hover:bg-[color:var(--teal-light)] transition cursor-pointer"
+            >
+              How it works
+            </a>
           </div>
 
           {/* Trust */}
@@ -71,7 +79,10 @@ export default function Providers() {
       </section>
 
       {/* How it works */}
-      <section className="relative bg-[color:var(--off-white)] py-28 px-6 md:px-16">
+      <section
+        id="how-it-works"
+        className="relative bg-[color:var(--off-white)] py-28 px-6 md:px-16"
+      >
         <div className="max-w-7xl mx-auto">
           {/* Header */}
           <div className="text-center mb-20">
@@ -88,7 +99,7 @@ export default function Providers() {
             </h2>
           </div>
 
-          {/* List (NOW properly constrained) */}
+          {/* List */}
           <div className="space-y-32">
             {[
               {
@@ -266,13 +277,21 @@ export default function Providers() {
 
           {/* CTA buttons */}
           <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <button className="w-full sm:w-auto bg-white text-[color:var(--teal-dark)] px-8 py-3.5 rounded-full font-semibold shadow-lg hover:scale-[1.03] transition cursor-pointer">
+            <a
+              href="https://app.ubimd.com/dashboard/auth/signup"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full sm:w-auto bg-white text-[color:var(--teal-dark)] px-8 py-3.5 rounded-full font-semibold shadow-lg hover:scale-[1.03] transition cursor-pointer"
+            >
               Become a provider
-            </button>
+            </a>
 
-            <button className="w-full sm:w-auto px-8 py-3.5 rounded-full border border-white/30 text-white hover:bg-white/10 transition backdrop-blur cursor-pointer">
+            <a
+              href="#how-it-works"
+              className="w-full sm:w-auto px-8 py-3.5 rounded-full border border-white/30 text-white hover:bg-white/10 transition backdrop-blur cursor-pointer"
+            >
               Learn how it works
-            </button>
+            </a>
           </div>
 
           {/* trust indicators */}

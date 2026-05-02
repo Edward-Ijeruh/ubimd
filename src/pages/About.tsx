@@ -80,8 +80,8 @@ const About = () => {
       <section className="px-6 md:px-16 py-28 relative overflow-hidden max-w-7xl mx-auto">
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center">
           {/* Left side */}
-          <div className="space-y-8 relative">
-            <div className="space-y-5 relative z-10">
+          <div className="space-y-8 relative flex flex-col items-center md:items-start text-center md:text-left">
+            <div className="space-y-5 relative z-10 max-w-xl">
               {/* Pill */}
               <div className="inline-flex items-center gap-2 px-4 py-1.5 mb-6 rounded-full bg-[color:var(--teal-light)] text-[color:var(--teal-dark)] border border-[color:var(--teal)]/30 text-xs font-medium tracking-wide shadow-sm">
                 <span className="w-2 h-2 rounded-full bg-[color:var(--teal)] animate-pulse" />
@@ -355,11 +355,21 @@ const About = () => {
 
           {/* Buttons */}
           <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <a className="w-full sm:w-auto bg-white text-[color:var(--teal-dark)] px-8 py-3.5 rounded-full font-semibold shadow-lg hover:scale-[1.03] hover:shadow-xl transition-all duration-300 text-center cursor-pointer">
+            <a
+              href="https://app.ubimd.com/dashboard/auth/signup"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full sm:w-auto bg-white text-[color:var(--teal-dark)] px-8 py-3.5 rounded-full font-semibold shadow-lg hover:scale-[1.03] hover:shadow-xl transition-all duration-300 text-center cursor-pointer"
+            >
               Book Consultation
             </a>
 
-            <a className="w-full sm:w-auto px-8 py-3.5 rounded-full font-semibold border border-white/30 text-white hover:bg-white/10 transition-all duration-300 text-center backdrop-blur cursor-pointer">
+            <a
+              href="https://app.ubimd.com/dashboard/auth/signup"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full sm:w-auto px-8 py-3.5 rounded-full font-semibold border border-white/30 text-white hover:bg-white/10 transition-all duration-300 text-center backdrop-blur cursor-pointer"
+            >
               Join as Provider
             </a>
           </div>
