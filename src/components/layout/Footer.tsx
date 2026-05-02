@@ -21,7 +21,7 @@ const Footer = () => {
 
           <p className="text-sm text-white/50 leading-7 mt-4 max-w-[280px]">
             Secure, accessible telemedicine for Nigeria. MDCN-verified doctors.
-            Built by LanderCraft Technologies.
+            Built by {builder}.
           </p>
         </div>
 
@@ -32,44 +32,36 @@ const Footer = () => {
           </h4>
           <ul className="space-y-2 text-sm">
             <li>
-              <a
-                href="#features"
+              <Link
+                to="/patients"
                 className="text-white/60 hover:text-[#3b82f6] transition"
               >
-                Features
-              </a>
+                For Patients
+              </Link>
             </li>
             <li>
-              <a
-                href="#pricing"
-                className="text-white/60 hover:text-[#3b82f6] transition"
-              >
-                Pricing
-              </a>
-            </li>
-            <li>
-              <a
-                href="#providers"
+              <Link
+                to="/providers"
                 className="text-white/60 hover:text-[#3b82f6] transition"
               >
                 For Providers
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="#"
+              <Link
+                to="/pricing"
                 className="text-white/60 hover:text-[#3b82f6] transition"
               >
-                How It Works
-              </a>
+                Pricing
+              </Link>
             </li>
             <li>
-              <a
-                href="#"
+              <Link
+                to="/blog"
                 className="text-white/60 hover:text-[#3b82f6] transition"
               >
                 Blog
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
@@ -81,36 +73,20 @@ const Footer = () => {
           </h4>
           <ul className="space-y-2 text-sm">
             <li>
-              <a
-                href="#"
+              <Link
+                to="/about"
                 className="text-white/60 hover:text-[#3b82f6] transition"
               >
                 About UbiMD
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="#"
+              <Link
+                to="/contact"
                 className="text-white/60 hover:text-[#3b82f6] transition"
               >
-                Careers
-              </a>
-            </li>
-            <li>
-              <a
-                href="#"
-                className="text-white/60 hover:text-[#3b82f6] transition"
-              >
-                Contact Us
-              </a>
-            </li>
-            <li>
-              <a
-                href="#"
-                className="text-white/60 hover:text-[#3b82f6] transition"
-              >
-                LanderCraft Technologies
-              </a>
+                Contact
+              </Link>
             </li>
           </ul>
         </div>
@@ -122,36 +98,36 @@ const Footer = () => {
           </h4>
           <ul className="space-y-2 text-sm">
             <li>
-              <a
-                href="#"
+              <Link
+                to="/privacy"
                 className="text-white/60 hover:text-[#3b82f6] transition"
               >
                 Privacy Policy
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="#"
+              <Link
+                to="/terms"
                 className="text-white/60 hover:text-[#3b82f6] transition"
               >
                 Terms of Service
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="#"
+              <Link
+                to="/ndpr"
                 className="text-white/60 hover:text-[#3b82f6] transition"
               >
                 NDPR Compliance
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="#"
+              <Link
+                to="/cookies"
                 className="text-white/60 hover:text-[#3b82f6] transition"
               >
                 Cookie Policy
-              </a>
+              </Link>
             </li>
           </ul>
         </div>

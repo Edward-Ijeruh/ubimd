@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -9,7 +9,6 @@ const navLinks = [
   { name: "Pricing", href: "/pricing" },
   { name: "About", href: "/about" },
   { name: "Contact", href: "/contact" },
-  { name: "Blog", href: "/blog" },
 ];
 
 const languages = ["English", "Igbo", "Yoruba", "Hausa"];
@@ -48,12 +47,18 @@ export default function Navbar() {
         <ul className="hidden md:flex gap-8">
           {navLinks.map((link) => (
             <li key={link.name}>
-              <a
-                href={link.href}
-                className="text-gray-600 text-sm font-medium hover:text-blue-500 transition"
+              <NavLink
+                to={link.href}
+                className={({ isActive }) =>
+                  `text-sm font-medium transition ${
+                    isActive
+                      ? "text-blue-600 relative after:absolute after:-bottom-1 after:left-0 after:w-full after:h-[2px] after:bg-blue-500"
+                      : "text-gray-600 hover:text-blue-500"
+                  }`
+                }
               >
                 {link.name}
-              </a>
+              </NavLink>
             </li>
           ))}
         </ul>
@@ -94,7 +99,7 @@ export default function Navbar() {
 
           {/* Desktop CTA */}
           <a
-            href="#get-started"
+            href="https://app.ubimd.com/dashboard/auth/signup"
             className="hidden md:block bg-blue-500 hover:bg-blue-700 text-white px-5 py-2 rounded-full text-sm font-semibold transition"
           >
             Get Started
@@ -147,33 +152,31 @@ export default function Navbar() {
               {/* Links */}
               <div className="flex flex-col gap-2">
                 {navLinks.map((link) => (
-                  <a
+                  <NavLink
                     key={link.name}
-                    href={link.href}
+                    to={link.href}
                     onClick={() => setMobileOpen(false)}
-                    className="py-4 px-4 rounded-xl text-md font-medium text-gray-700 hover:bg-blue-50"
+                    className={({ isActive }) =>
+                      `py-4 px-4 rounded-xl text-md font-medium transition ${
+                        isActive
+                          ? "bg-blue-50 text-blue-600"
+                          : "text-gray-700 hover:bg-blue-50"
+                      }`
+                    }
                   >
                     {link.name}
-                  </a>
+                  </NavLink>
                 ))}
               </div>
 
               {/* CTA */}
               <div className="mt-auto pt-6 border-t border-gray-200 flex flex-col gap-3">
                 <a
-                  href="#get-started"
+                  href="https://app.ubimd.com/dashboard/auth/signup"
                   onClick={() => setMobileOpen(false)}
                   className="bg-blue-500 text-white py-3 rounded-xl text-center font-semibold"
                 >
                   Get Started
-                </a>
-
-                <a
-                  href="#providers"
-                  onClick={() => setMobileOpen(false)}
-                  className="border border-gray-200 py-3 rounded-xl text-center text-gray-700"
-                >
-                  Join as Provider
                 </a>
               </div>
             </motion.div>

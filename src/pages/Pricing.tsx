@@ -24,6 +24,11 @@ export default function Pricing() {
             </em>
           </h1>
 
+          {/* Divider accent */}
+          <div className="flex justify-center mt-6">
+            <div className="h-[2px] w-16 bg-[color:var(--teal)] rounded-full" />
+          </div>
+
           {/* Subtext */}
           <p className="mt-6 text-[color:var(--text-mid)] text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
             Choose a plan that fits your needs. Whether it’s occasional care or
